@@ -8,18 +8,11 @@
       <th>Launch Date</th>
    </tr>
 
-   <tr *ngFor="let satellite of satellites" [class.warning]="satellite.shouldShowWarning()">
+   <tr *ngFor="let satellite of satellites">
        <td>{{ satellite.name }}</td>
-       <td>{{ satellite.type }}</td>
+       <td [class.warning]="satellite.shouldShowWarning()">{{ satellite.type }}</td>
        <td>{{ satellite.operational }}</td>
        <td>{{ satellite.orbitType }}</td>
        <td>{{ satellite.launchDate }}</td>
    </tr>
 </table>
-<br>
-<hr>
-<br>
-<div class="search-form">
-   <input (keyup.enter)="search(searchTerm.value)" type="text">
-   <button (click)="search(searchTerm.value)" >Search</button>
-</div>
