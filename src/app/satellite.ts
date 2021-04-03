@@ -20,4 +20,3 @@ export class Satellite {
         }
     }
 }
-console.log(Satellite.shouldShowWarning())
