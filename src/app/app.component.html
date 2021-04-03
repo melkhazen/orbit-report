@@ -4,5 +4,7 @@
 <br>
 <div class="search-form">
     <input #searchTerm (keyup.enter)="search(searchTerm.value)" type="text">
-    <button (click)="search(searchTerm.value); searchTerm.value = ''" >Search</button>
+    <button (click)="search(searchTerm.value)" >Search</button>
  </div>
+
+ <app-orbit-counts></app-orbit-counts>
