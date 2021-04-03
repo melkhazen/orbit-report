@@ -4,7 +4,6 @@ export class Satellite {
     type: string;
     operational: boolean;
     launchDate: string;
-  static shouldSouwWarning: any;
     constructor(name: string, type: string, launchDate: string, orbitType: string, operational: boolean){
     this.name = name;
     this.type = type;
@@ -20,3 +19,5 @@ export class Satellite {
         }
     }
 }
+
+
