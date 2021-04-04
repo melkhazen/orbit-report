@@ -16,7 +16,7 @@ export class AppComponent {
     this.sourceList = [];
     let satellitesUrl = 'https://handlers.education.launchcode.org/static/satellites.json'; 
     this.displayList = this.sourceList;
-    this.spaceDebrisCount = this.typeCount('Space Debris') + 1;
+    this.spaceDebrisCount = this.typeCount('Space Debris');
    
     window.fetch(satellitesUrl).then(function(response) {
        response.json().then(function(data) {
