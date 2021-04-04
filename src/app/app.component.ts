@@ -10,12 +10,14 @@ export class AppComponent {
   title = 'orbit-report';
   sourceList: Satellite[];
   displayList: Satellite[];
+  spaceDebrisCount: number;
 
   constructor() {
     this.sourceList = [];
     let satellitesUrl = 'https://handlers.education.launchcode.org/static/satellites.json'; 
     this.displayList = this.sourceList;
-
+    this.spaceDebrisCount = this.typeCount('Space Debris') + 1;
+   
     window.fetch(satellitesUrl).then(function(response) {
        response.json().then(function(data) {
  
@@ -39,10 +41,23 @@ export class AppComponent {
         matchingSatellites.push(this.sourceList[i]);
      }
   }
-  // assign this.displayList to be the array of matching satellites
-  // this will cause Angular to re-make the table, but now only containing matches
   this.displayList = matchingSatellites;
   
  }
+ 
+
+ typeCount(inputType: string): number {
+   let count = 0
+   for(let i=0; i < this.sourceList.length; i++){
+    if (inputType === this.sourceList[i].type){
+       count += 1
+    }
+
+   }
+   return count
+
+ }
+
+
 
 }
