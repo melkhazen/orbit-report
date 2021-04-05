@@ -1,13 +1,10 @@
 <h3>Satellite Counts:</h3>
 <div class="counts" >
    <div>Total: <span>{{ satellites.length }}</span></div>
-   <div>Space Debris: <span>{{ appComponent.spaceDebrisCount }}</span></div>
-   <div>Communication: <span>2</span></div>
-   <div>Probe: <span>2</span></div>
-   <div>Positioning: <span>1</span></div>
-   <div>Space Station: <span>2</span></div>
-   <div>Telescope: <span>1</span></div>
+   <div>Space Debris: <span>{{searchLength[0]}}</span></div>
+   <div>Communication: <span>{{searchLength[1]}}</span></div>
+   <div>Probe: <span>{{searchLength[2]}}</span></div>
+   <div>Positioning: <span>{{searchLength[3]}}</span></div>
+   <div>Space Station: <span>{{searchLength[4]}}</span></div>
+   <div>Telescope: <span>{{searchLength[5]}}</span></div>
 </div>
-<p>pppppp</p>
-<p>{{ appComponent.typeCount('Space Debris') }}</p>
-<p>pppppp</p>

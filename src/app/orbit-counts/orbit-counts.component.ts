@@ -10,8 +10,9 @@ import { AppComponent} from '../app.component'
 export class OrbitCountsComponent implements OnInit {
   @Input() satellites: Satellite[];
   @Input() appComponent: AppComponent[];
+  @Input() searchLength: number[]
+  
   constructor() { }
-
   ngOnInit() {
   }
 
