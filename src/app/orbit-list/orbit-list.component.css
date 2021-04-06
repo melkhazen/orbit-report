@@ -28,5 +28,10 @@ th, td {
 }
 
 tr:nth-child(even) {
-    background-color: #67aa70;
+    background-color: #43c9f1;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
   }
