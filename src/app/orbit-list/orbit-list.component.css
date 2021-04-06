@@ -13,7 +13,7 @@ table {
   overflow: hidden;
   margin: 12px 0;
   min-width: 300px;
-  background: #dad8d8;
+  background: rgba(204, 194, 194, 0.6);;
 }
 
 .header-row {
@@ -28,7 +28,7 @@ th, td {
 }
 
 tr:nth-child(even) {
-    background-color: #43c9f1;
+    background-color: #22bdec;
   }
 
   .center {
