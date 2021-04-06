@@ -10,10 +10,19 @@ import { AppComponent} from '../app.component'
 export class OrbitCountsComponent implements OnInit {
   @Input() satellites: Satellite[];
   @Input() appComponent: AppComponent[];
-  @Input() searchLength: number[]
   
   constructor() { }
   ngOnInit() {
+  }
+
+  countType(array: Satellite[], type: string){
+    let countHolder = 0;
+    for (let i = 0; i < array.length; i++){
+      if (array[i].type === type){
+        countHolder += 1
+      }
+    }
+    return countHolder
   }
 
 }
